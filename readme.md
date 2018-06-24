@@ -22,4 +22,5 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 
 -----------------------------------------------------------------------------------------------------------------------
 Create .env file
+
 go to your console and run "php artisan orders:get"
