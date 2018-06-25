@@ -10,7 +10,7 @@ class PrepareOrderHistory implements PrepareOrderHistoryInterface
 {
 
 	/**
-	 * @var array
+	 * @var string
 	 */
 	private $orderHistory;
 

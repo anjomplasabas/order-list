@@ -87,9 +87,9 @@ class ArrangeOrderResponse implements ArrangeOrderResponseInterface
 			// Set response format into collection object
 			$this->responseCollection = collect($this->responseFormat);
 			// Sort by order id ascending
-			$sorted = $this->responseCollection->sortBy('id');
+			$sortedOrders = $this->responseCollection->sortBy('id');
 			return [
-				'list'				=> $sorted->values()->all(),
+				'list'				=> $sortedOrders->values()->all(),
 				'total_collections'	=> $this->totalCollections,
 				'total_sales'		=> $this->totalSales
 			];

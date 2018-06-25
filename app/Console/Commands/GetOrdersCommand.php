@@ -68,21 +68,21 @@ class GetOrdersCommand extends Command
         $this->orders = $orderApi->callOrderRequest();
         $this->formattedOrders = $arrangeOrderResponse->prepareFormat($this->orders);
         foreach ($this->formattedOrders['list'] as $formattedOrder) {
-        	echo $formattedOrder['headers'].":\n";
-        	echo "\thistory:\n";
+        	echo $formattedOrder['headers'].":\r\n";
+        	echo "\thistory:\r\n";
         	foreach ($formattedOrder['history'] as $history) {
-        		echo "\t\t".$history['timestamp'].": ".$history['status']."\n";
+        		echo "\t\t".$history['timestamp'].": ".$history['status']."\r\n";
         	}
-        	echo "\tbreakdown:\n";
+        	echo "\tbreakdown:\r\n";
         	foreach ($formattedOrder['breakdown'] as $breakdownIndex => $breakdownValue) {
-        		echo "\t\t".$breakdownIndex.': '.$breakdownValue."\n";
+        		echo "\t\t".$breakdownIndex.': '.$breakdownValue."\r\n";
         	}
-        	echo "\tfees:\n";
+        	echo "\tfees:\r\n";
         	foreach ($formattedOrder['fees'] as $feesIndex => $feesValue) {
-        		echo "\t\t".$feesIndex.': '.$feesValue."\n";
+        		echo "\t\t".$feesIndex.': '.$feesValue."\r\n";
         	}
         }
-        echo "total collections: ".$this->formattedOrders['total_collections']."\n";
+        echo "total collections: ".$this->formattedOrders['total_collections']."\r\n";
         echo "total sales: ".$this->formattedOrders['total_sales'];
     }
 
