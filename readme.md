@@ -1,3 +1,9 @@
+Create .env file
+
+go to your console and run "php artisan orders:get"
+
+-----------------------------------------------------------------------------------------------------------------------
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
